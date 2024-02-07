@@ -1,4 +1,4 @@
-# 41m:31s
+# 57m:00s
 class Student:
     def __init__(self, name, house) -> None:
         self.name = name
@@ -13,8 +13,7 @@ def main():
 def get_student():
     name = input("Name: ")
     house = input("House: ")
-    student = Student(name, house)
-    return student
+    return Student(name, house)
 
 
 if __name__ == "__main__":
