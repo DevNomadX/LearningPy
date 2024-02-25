@@ -1,8 +1,6 @@
-# 57m:00s
+# 1h:48m
 class Student:
     def __init__(self, name, house) -> None:
-        if not name:
-            raise ValueError("Missing Name")
 
         if house not in ["Jessore", "Khulna", "Bangladesh"]:
             raise ValueError("Invalid House")
@@ -12,6 +10,26 @@ class Student:
 
     def __str__(self) -> str:
         return f"{self.name} from {self.house}"
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Missing Name")
+        self._name = name
+
+    @property
+    def house(self):
+        return self._house
+
+    @house.setter
+    def house(self, house):
+        if house not in ["Jessore", "Khulna", "Bangladesh"]:
+            raise ValueError("Invalid house")
+        self._house = house
 
 
 def main():
